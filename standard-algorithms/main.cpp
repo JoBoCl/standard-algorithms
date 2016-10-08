@@ -7,9 +7,19 @@
 //
 
 #include <iostream>
+#include "array-stack.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
     std::cout << "Hello, World!\n";
+    ArrayStack<int, 4> testStack;
+    
+    testStack.push(1);
+    std::cout << "Pushed 1\n";
+    if (testStack.pop() == 1) {
+        std::cout << "Popped 1\n";
+    } else {
+        std::cout << "Error, bad pop\n";
+    }
+
     return 0;
 }
